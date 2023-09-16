@@ -1,0 +1,573 @@
+@charset "utf-8";
+html { margin: 0; padding: 0; }
+img { border: 0 none; max-width: 100%; height: auto; }
+ul, li, ol { list-style-type: none; margin: 0; padding: 0; }
+a { color: #fff; text-decoration: none; transition: 0.3s; }
+body { background: #000; color: #fff; font-size: 16px; font-weight: 600; line-height: 20px; font-family: 'Helvetica Now Display'; }
+.container-fluid { float: left; }
+/* Helvetica Now Display Fonts link start */
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Light.eot'); src: local('fonts/Helvetica Now Display Light'), local('HelveticaNowDisplay-Light'), url('fonts/HelveticaNowDisplay-Light.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Light.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Light.woff') format('woff'), url('fonts/HelveticaNowDisplay-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-ExtLt.eot'); src: local('fonts/Helvetica Now Display ExtLt'), local('HelveticaNowDisplay-ExtLt'), url('fonts/HelveticaNowDisplay-ExtLt.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-ExtLt.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-ExtLt.woff') format('woff'), url('fonts/HelveticaNowDisplay-ExtLt.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-ExtBlk.eot'); src: local('fonts/Helvetica Now Display ExtBlk'), local('HelveticaNowDisplay-ExtBlk'), url('fonts/HelveticaNowDisplay-ExtBlk.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-ExtBlk.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-ExtBlk.woff') format('woff'), url('fonts/HelveticaNowDisplay-ExtBlk.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Bold.eot'); src: local('fonts/Helvetica Now Display Bold'), local('HelveticaNowDisplay-Bold'), url('fonts/HelveticaNowDisplay-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Bold.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Bold.woff') format('woff'), url('fonts/HelveticaNowDisplay-Bold.ttf') format('truetype'); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Regular.eot'); src: local('fonts/Helvetica Now Display Regular'), local('HelveticaNowDisplay-Regular'), url('fonts/HelveticaNowDisplay-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Regular.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Regular.woff') format('woff'), url('fonts/HelveticaNowDisplay-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Thin.eot'); src: local('fonts/Helvetica Now Display Thin'), local('HelveticaNowDisplay-Thin'), url('fonts/HelveticaNowDisplay-Thin.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Thin.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Thin.woff') format('woff'), url('fonts/HelveticaNowDisplay-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-ExtraBold.eot'); src: local('fonts/Helvetica Now Display ExtBd'), local('HelveticaNowDisplay-ExtraBold'), url('fonts/HelveticaNowDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-ExtraBold.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-ExtraBold.woff') format('woff'), url('fonts/HelveticaNowDisplay-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Medium.eot'); src: local('fonts/Helvetica Now Display Medium'), local('HelveticaNowDisplay-Medium'), url('fonts/HelveticaNowDisplay-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Medium.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Medium.woff') format('woff'), url('fonts/HelveticaNowDisplay-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Helvetica Now Display'; src: url('fonts/HelveticaNowDisplay-Black.eot'); src: local('fonts/Helvetica Now Display Black'), local('HelveticaNowDisplay-Black'), url('fonts/HelveticaNowDisplay-Black.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNowDisplay-Black.woff2') format('woff2'), url('fonts/HelveticaNowDisplay-Black.woff') format('woff'), url('fonts/HelveticaNowDisplay-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; }
+/* Helvetica Now Display Fonts link end */
+
+/* banner part css start */
+.container-fluid.mainheaderdiv { background: url("images/bannerimg.png"); height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: right bottom; display: flex; align-content: center; align-items: center; }
+.mainheader { position: absolute; top: 0; z-index: 99; width: 100%; padding-left: 100px; padding-right: 100px; padding-top: 100px; }
+.container-fluid.mainheaderdiv { padding-left: 100px; padding-right: 100px; padding-top: 80px; position: relative; }
+.mainmenu ul li a { text-transform: uppercase; font-weight: 700; font-size: 16px; line-height: 124%; letter-spacing: 0.085em; color: #fff; }
+.mainmenu ul li a:hover { text-decoration: none; color: #00ffca; }
+.mainmenu ul li { display: inline-block; margin-right: 50px; }
+.mainmenu ul li:last-child, .headersocial ul li:last-child { margin-right: 0px; }
+.headersocial ul li { display: inline-block; margin-right: 15px; position: relative; bottom: 3px; }
+.headersocial .sitecta { bottom: 0 !important; }
+.header_social_div_common { text-align: right; }
+.header_middle_col, .header_first_col, header_third_col { align-self: center; }
+.headermainlogo img { max-width: 230px; }
+.bannertoplefttest h1 { font-weight: 800; font-size: 50px; line-height: 108%; letter-spacing: 0.03em; color: #00FFCA; }
+.bannertoplefttest h4 { font-weight: 400; font-size: 33px; line-height: 108%; letter-spacing: 0.03em; color: #fff; }
+.bannertextbottomnbg h2 span { font-weight: 400; font-size: 33px; line-height: 108%; letter-spacing: 0.025em; color: #fff; }
+.bannertextbottomnbg h2 { font-weight: 800; font-size: 60px; color: #00FFCA; line-height: 65px; padding-left: 32px; position: relative; z-index: 9; }
+.bannertextbottomnbg { padding-left: 55px; position: relative; margin-top: 40px; }
+.bannertextbottomnbg img { position: relative; bottom: 35px; z-index: 9; }
+.bannetextleftsivcommon { padding-top: 100px; padding-left: 70px; }
+.bannerright_img { padding-top: 35px; }
+.bannertextbottomnbg::after { content: ""; position: absolute; background: url("images/bannertextbg.png"); width: 1000px; height: 225px; left: -100%; background-position: right; top: 10px; background-size: cover; background-repeat: no-repeat; }
+.banneroverlay { position: absolute; width: 100%; height: 100%; background: #000; left: 0; right: 0; top: 0; bottom: 0; opacity: .5; }
+/* banner section css end */
+/* Holdoffside section css start */
+.container-fluid.holdoffside_section { background: url("images/holdoffside_bg.png"); height: 750px; background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; overflow: hidden; display: flex; align-content: center; align-items: center; }
+.holdoffside_overlay { position: absolute; width: 100%; height: 100%; background: #000; left: 0; right: 0; top: 0; bottom: 0; opacity: 0.5; }
+.holdoffside_img img { max-width: 600px; }
+.holdoffside_textdiv { position: relative; display: flex; align-content: center; align-items: center; justify-content: center; }
+.holdoffside_text h1 { font-weight: 800; font-size: 55px; line-height: 102.5%; letter-spacing: 0.04em; color: #fff; position: relative; z-index: 99; }
+.holdoffside_text h1 span { color: #00FFCA; }
+.holdoffside_text p { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; line-height: 149%; letter-spacing: 0.055em; color: #fff; position: relative; z-index: 99; }
+.holdoffside_text h6 { font-weight: 700; font-size: 20px; line-height: 149%; letter-spacing: 0.055em; color: #fff; position: relative; z-index: 9; }
+.holdoffside_text img { max-width: 190px; position: relative; z-index: 9; }
+.holdoffside_img { position: relative; left: 50px; z-index: 9; }
+.holdoffside_text::after { content: ""; background: url("images/holdoffside_textbg.png"); position: absolute; left: -138px; width: 1000%; height: 100%; background-repeat: no-repeat; background-position: left; top: 0; /* background: linear-gradient(180deg, #00FFCA 17.94%, rgba(217, 217, 217, 0) 100%); */ /* mix-blend-mode: overlay; */ opacity: .5; }
+.holdoffside_text { position: relative; right: 145px; padding-top: 25px; padding-bottom: 30px; }
+/* Holdoffside section css end */
+/* Qatar section css start */
+.container-fluid.qatarsection { background: url("images/qatarbg.png"); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; }
+.qatarlogo img { max-width: 200px; }
+.qatar_userimg { position: absolute; bottom: 0; left: 0; }
+.qatarlogo { position: relative; top: 100px; left: 40px; }
+.qatarright_text img { max-width: 150px; }
+.qaratrightcol, .container-fluid.qatarsection { height: 580px; }
+.qaratrightcol { align-self: center; display: flex; align-content: center; align-items: center; }
+.qatarright_text h1 { font-weight: 800; font-size: 60px; line-height: 102.5%; letter-spacing: 0.04em; color: #fff; margin-bottom: 25px; }
+.qatarright_text { position: relative; left: 45px; }
+.qatarright_text h1 span { color: #FFE602; }
+.qatarright_text p { font-weight: 700; font-size: 20px; line-height: 124.5%; letter-spacing: 0.055em; color: #fff; font-family: 'Inter', sans-serif; }
+.qataroverlay { background: linear-gradient(180deg, rgba(206, 181, 93, 0) 0%, #CBA930 97.2%); mix-blend-mode: soft-light; position: absolute; width: 100%; height: 100%; left: 0; right: 0; top: 0; transform: rotate(-180deg); }
+/* Qatar section css start */
+/* Fully-pledge web3 betting platform section css start */
+.fullypledge_left_text h1 { font-weight: 800; font-size: 60px; line-height: 102.5%; text-align: right; letter-spacing: 0.04em; color: #00FFCA; }
+.fullypledge_left_text h1 span { color: #fff; }
+.fullypledge_left_text p { max-width: 410px; font-weight: 700; font-size: 20px; line-height: 124.5%; text-align: right; letter-spacing: 0.055em; color: #fff; font-family: 'Inter', sans-serif; float: right; }
+.container-fluid.fullypledge_section { padding-right: 0; padding-left: 0; background: #1F2730; }
+.fullypledge_left_col { background: url("images/football-trainer-teaching-his-pupils 1.png"); background-size: cover; background-repeat: no-repeat; background-position: center center; float: left; width: 100%; position: relative; margin-top: 155px; margin-bottom: 155px; padding-top: 40px; padding-bottom: 40px; }
+.playbtn { float: right; width: 100%; clear: left; }
+.fullypledge_left_col_common { width: 50%; text-align: right; position: relative; z-index: 9; }
+.fullpldgeroverlay { position: absolute; width: 100%; height: 100%; background: #333B48; left: 0; right: 0; top: 0; bottom: 0; mix-blend-mode: multiply; }
+.fullypledgecommondiv { position: relative; }
+.fullypledge_right_img { position: absolute; right: 80px; top: 90px; }
+.fullypledge_right_img img { max-width: 560px; }
+.fullypledge_right_col::before { content: ""; background: url("images/crossbg.png"); position: absolute; right: 0; width: 882px; height: 1000px; top: 0; background-size: cover; }
+.fullytext { width: 100%; float: left; }
+.fullypledge_left_text { width: 100%; float: left; }
+.playbtn a { position: relative; z-index: 9; }
+/* Fully-pledge web3 betting platform section css end */
+
+/* OUR PROVIDERS section css start */
+.container-fluid.our-providers-section { background: linear-gradient(180deg, #333B48 0%, #20252C 100%); padding-top: 65px; padding-bottom: 80px; }
+.section-title h1 { font-weight: 500; font-size: 50px; line-height: 128%; text-align: center; letter-spacing: 0.2em; color: #fff; }
+.section-title h1 span { color: #00FFCA; }
+.providers_img_div { text-align: center; margin-top: 30px; }
+.provider_imglist ul { display: flex; align-content: center; align-items: center; justify-content: center; }
+.provider_imglist img { max-width: 110px; }
+.provider_imglist .secondlist_row { margin-top: 20px; }
+.provider_imglist ul li { margin: 0px 20px; }
+/* OUR PROVIDERS section css end */
+
+/*footer css start*/
+.container-fluid.footer { width: 100%; float: left; padding-top: 100px; padding-bottom: 100px; background: #15181D; }
+.footer_logo_img p { font-weight: 500; font-size: 22px; line-height: 128%; letter-spacing: 0.05em; color: #C0C0C0; margin-top: 20px; }
+.footer_menu_list_text h1 { margin-bottom: 10px; text-transform: uppercase; font-weight: 700; font-size: 22px; line-height: 128%; letter-spacing: 0.05em; color: #fff; }
+.footer_menu_list_text ul li a { font-weight: 400; font-size: 18px; line-height: 128%; letter-spacing: 0.05em; color: #fff; }
+.footer_menu_list_text ul li { font-style: normal; font-weight: 400; font-size: 20px; line-height: 29px; color: #fff; margin-bottom: 4px; }
+.footer_menu_list_text ul li:last-child { margin-bottom: 0; }
+.footer_menu_list { display: flex; float: right; }
+.footer_menu_list_text { margin-left: 92px; }
+.container-fluid.footer a:hover { transition: all 2s; color: #01FFCA; text-decoration: none; }
+/*footer css end*/
+/* features section css start */
+.container-fluid.features-section { background: url("images/features_bluebg.png"); background-size: cover; background-repeat: no-repeat; padding-bottom: 160px; margin-top: -1px; margin-bottom: -1px; }
+.sportstext h1 { font-weight: 400; font-size: 50px; line-height: 102.5%; letter-spacing: 0.025em; color: #fff; position: relative; z-index: 99; margin-bottom: 25px; }
+.sportstext h1 span { color: #00FFCA; }
+.sportstext p { font-weight: 700; font-size: 20px; line-height: 124.5%; letter-spacing: 0.055em; color: #fff; font-family: 'Inter', sans-serif; position: relative; z-index: 99; }
+.sportstext::after { content: ""; background: url("images/bgpattern.png"); position: absolute; width: 100%; left: 0; height: 100%; top: 0; background-repeat: no-repeat; }
+.sportsbook_img img { max-width: 440px; position: relative; right: 30px; }
+.sportsbook_img { position: relative; z-index: 9; bottom: 50px; }
+.sportstext { padding: 35px 100px 35px 165px; position: relative; }
+.sportsbook_contentbg { width: 800px; position: absolute; top: 0; right: 0; background: #3C3C3C; box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25); border-radius: 17px; }
+.sports-section-div { position: relative; margin-top: 130px; right: 22px; }
+.sportsjoinnow-div { position: relative; z-index: 9; margin-top: 40px; }
+.sportjoinnow-bg { display: flex; align-content: center; align-items: center; justify-content: end; }
+.jointext { text-align: right; background: url("images/joinbgclr.png"); background-size: cover; padding-right: 17px; padding-top: 5px; }
+.joinbtn img { max-height: 62px; position: relative; right: 10px; }
+.jointext h2 { font-weight: 500; font-size: 20px; line-height: 24px; text-align: right; color: #00FFCA; font-family: 'Inter', sans-serif; }
+/* features section css end */
+.offsidsecoin_section { background: #3C3C3C; box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25); border-radius: 17px; width: 97%; margin: 0 auto; padding-top: 50px; padding-bottom: 50px; margin-bottom: 80px; }
+.coinlist { margin-top: 45px; }
+.cointitle h1 { font-weight: 400; font-size: 50px; line-height: 102.5%; text-align: center; letter-spacing: 0.025em; color: #fff; }
+.cointitle h1 span { color: #00FFCA; font-weight: 700; }
+.coinlist ul li { background: #9D9D9D; box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25); border-radius: 17px; display: flex; width: 117px; height: 117px; flex-direction: column; align-content: center; align-items: center; justify-content: center; margin: 0px 7px; }
+.coinlist ul { display: flex; align-content: center; align-items: center; justify-content: center; }
+.livestream_section .sportstext::after { content: ""; background: url("images/livetreampatternbg.png"); position: absolute; width: 100%; left: 0; height: 100%; top: 0; background-repeat: no-repeat; }
+.livestream_section .sportstext { padding: 20px 100px 20px 280px; position: relative; }
+.livestream_section .sportsbook_img { position: relative; z-index: 9; bottom: 0; }
+.livestream_section .sportsbook_contentbg { width: 750px; }
+.livestream_section .sportsbook_img img { max-width: 600px; position: relative; right: 0; bottom: 0; top: -40px; left: 20px; }
+.referfriend_section { position: relative; }
+.referfriend_img img { max-height: 600px; }
+.referfriend_imgdiv { position: absolute; right: -105px; bottom: -135%; z-index: 9; }
+.referfrienddiv { position: relative; padding-left: 100px; }
+.referfriend_section { background: #3C3C3C; box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25); border-radius: 17px; width: 97%; margin: 0 auto; margin-bottom: 0px; padding-top: 25px; padding-bottom: 25px; margin-bottom: 80px; position: relative; }
+.referfriend_text h1 { font-weight: 700; font-size: 50px; line-height: 102.5%; letter-spacing: 0.025em; color: #fff; margin-bottom: 20px; }
+.referfriend_text h1 span { color: #00FFCA; }
+.referfriend_text p { font-weight: 700; font-size: 20px; line-height: 124.5%; letter-spacing: 0.055em; color: #fff; font-family: 'Inter', sans-serif; position: relative; z-index: 99; }
+.referfriend_section::after { content: ""; background: url("images/mobilepattern.png"); position: absolute; right: 0; width: 68%; height: 100%; top: 0; background-repeat: no-repeat; }
+.container-fluid.development-strategy-section { background: linear-gradient(180deg, #333B48 0%, #20252C 100%); padding-top: 90px; padding-bottom: 135px; }
+.developmentgrid_top { display: flex; justify-content: space-evenly; }
+.developmentgrid_bottom { display: flex; justify-content: space-between; position: relative; /*	left: 54px;*/ margin-top: 95px; }
+.development_col { text-align: center; position: relative; z-index: 9; }
+.development-text h1 { font-weight: 700; font-size: 24px; line-height: 110%; text-align: center; color: #02856A; margin-bottom: 20px; margin-top: 30px; min-height: 55px; transition: all .5s; }
+.development-text p { font-weight: 400; font-size: 15px; line-height: 18px; text-align: center; color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+.develipment-img { background: #424C5B; border: 2px solid #02856A; border-radius: 11px; width: 100px; height: 100px; display: flex; align-content: center; align-items: center; justify-content: center; transition: all .5s; margin: 0 auto; }
+.developmentbox:hover .develipment-img, .boxon .develipment-img { box-shadow: 0px 0px 24px #00FFCA; }
+.development-text { width: 230px; margin: 0 auto; }
+.developmentgrid { width: 1030px; margin: 0 auto; }
+.develipment-img img { max-width: 60px; }
+.developmentgrid_common { position: relative; }
+.developentprocessdiv { margin-top: 55px; }
+.boxon .development-text h1, .developmentbox:hover .development-text h1 { color: #00FFCA; }
+.developmentgrid_top .development_col:last-child::after { content: ""; background: url("images/verticlebar.png"); position: absolute; right: -33px; width: 170px; height: 379px; background-size: cover; background-position: 100%; top: 40px; z-index: -1; }
+.developmentgrid_top .development_col:last-child { margin-right: 30px; right: 30px; }
+.developmentgrid_bottom .development_col::after { content: ""; background: #02856a; height: 10px; width: 184px; position: absolute; left: 157px; top: 48px; z-index: -1; }
+.developmentgrid_top .development_col:nth-child(2)::after { content: ""; background: #02856a; height: 10px; width: 184px; position: absolute; left: 157px; top: 48px; z-index: -1; }
+.developmentgrid_top .development_col:first-child::after { content: ""; background: url("images/onbarprocess.png"); height: 10px; width: 221px; position: absolute; left: 154px; top: 48px; z-index: -1; background-size: 100%; }
+.developmentgrid_bottom .development_col:last-child::after { content: none; }
+.container-fluid.features-section { overflow: hidden; }
+.provider_imglist.mobileipad { display: none; }
+.mobileleftimg { display: none; }
+.coinlist.mobile { display: none; }
+.qatarlogo.mobileqatarlogo { display: none; }
+.joinnowmobilebtn { display: none; }
+.hold-mobileimg { display: none; }
+.sitecta a { background: linear-gradient(180deg, #22967E 0%, #043228 100%); border: 2px solid #00FFCA; box-shadow: 0px 0px 8px #00FFCA; border-radius: 10px; font-style: italic; font-weight: 950; font-size: 25px; line-height: 51px; text-align: center; color: #00FFCA; text-transform: uppercase; position: relative; padding: 13px 25px; }
+.headersocial .sitecta a { font-size: 20px; }
+.yellowborder-btn a { font-style: italic; font-weight: 500; font-size: 20px; line-height: 32px;  text-align: center; color: #FFE602; background: #6A1530; border: 2px solid #FFE602; border-radius: 10px; width: fit-content; padding: 5px 20px; }
+.yellowborder-btn a:hover, .sitecta a:hover ,.joinbtn a:hover{ text-decoration: none; }
+.holdoffside_text .sitecta { position: relative; z-index: 9; padding-top: 10px; }
+.bannertextbottomnbg .sitecta a { color: #fff; position: relative; z-index: 9; font-weight: 800; }
+.bannertextbottomnbg .sitecta { padding-left: 32px; margin-top: 20px; }
+.main_humbergmenu { display: none; }
+.bannertextbottomnbg .sitecta::after { content: ""; background: url("images/claimhere_shadow.png"); position: absolute; left: 60px; top: 105px; width: 290px; height: 125px; background-size: 100%; background-repeat: no-repeat; }
+.joinbtn a {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 44px;
+	display: flex;
+	align-items: center;
+	color: #0C6452;
+	text-transform: capitalize;
+	background: #00FFCA;
+	border-radius: 10px;
+	height: 58px;
+	padding: 0px 10px;
+	position: relative;
+	right: 5px;
+}
+.joinbtn img {
+	max-width: 48px;
+	padding-left: 17px;
+}
+/* RESPONSIVE MEDIA QUERY CSS START */
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+.coinlist.mobile { width: 330px !important; }
+.coinimg { width: 90px !important; height: 90px !important; }
+.coinimg img { max-width: 45px !important; }
+}
+ @media only screen and (max-width: 767px) {
+.developmentgrid { width: 100%; padding: 0px 20px; }
+.footer_logo_img img { max-width: 200px; }
+.section-title h1 { font-size: 26px; }
+.provider_imglist ul li { margin: 0px 5px; }
+.provider_imglist img { max-width: 40px; }
+.provider_imglist .secondlist_row { margin-top: 15px; margin-bottom: 15px; }
+.providers_img_div { margin-top: 20px; }
+.container-fluid.our-providers-section { padding-top: 45px; padding-bottom: 50px; }
+.joinbtn a {
+
+	font-size: 30px;
+	line-height: 58px;
+	display: block;
+
+	position: relative;
+	right: 0;
+}
+.yellowborder-btn {
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.bannertextbottomnbg .sitecta {
+	padding-left: 0;
+	margin-top: 20px;
+}
+/**/
+.referfriend_text h1 { font-size: 25px; }
+.referfrienddiv { position: relative; padding-left: 0; text-align: center; display: flex; flex-direction: column; }
+.referfriend_img img { max-height: 330px; }
+.referfriend_imgdiv { position: inherit; right: 0; bottom: 0; z-index: 9; margin-top: -130px; }
+.referfriend_text p { font-size: 16px; }
+.referfriend_text { order: 2; position: relative; z-index: 99; }
+.referfriend_section::after { content: ""; background: url("images/referpattern-mobile.png"); position: absolute; right: 0; width: 100%; height: 100%; top: 0; background-repeat: no-repeat; background-size: 100%; border-radius: 20px; }
+.container-fluid.features-section { padding-bottom: 0; }
+.livestream_section .sportsbook_img img { max-width: 280px; position: inherit; right: 0; bottom: 0; top: 45px; left: 0; }
+.sports-section-div { position: relative; margin-top: -70px; right: 0; margin-bottom: 35px; }
+.sportstext h1 { font-size: 28px; margin-bottom: 15px; }
+.sportstext p { font-size: 16px; line-height: 17px; letter-spacing: 0.055em; }
+.sportstext p br { display: none; }
+.livestream_section .sportsbook_contentbg { width: 100%; position: inherit; margin-top: -63px; padding: 0px 20px; }
+.livestream_section .sportstext::after { left: 0; content: ""; background: url("images/referpattern-mobile.png"); background-repeat: repeat; background-size: auto; position: absolute; right: 0; width: 100%; height: 100%; top: 0; background-repeat: no-repeat; background-size: 100%; border-radius: 25px; }
+.livestream_section .sportstext { text-align: center; padding-top: 97px; padding-bottom: 25px; padding-left: 0; padding-right: 0; }
+.livestream_section { margin-bottom: 150px; }
+.coinlist ul { display: inherit; align-content: center; align-items: center; justify-content: center; }
+.offsidsecoin_section { margin-bottom: 0; }
+.coinlist ul li img { max-width: 55px; }
+.coinlist ul li { width: 90px; height: 90px; margin: 0px 7px; }
+.cointitle h1 { font-size: 22px; padding: 0px 10px; }
+.coinlist.mobile { display: block; width: 260px; margin: 0 auto; margin-top: 35px; }
+.coincol { margin-bottom: 20px; -ms-flex: 0 0 33.333333%; flex: 0 0 33.333333%; max-width: 33.333333%; }
+.coinlist.desktop { display: none; }
+.coinimg img { max-width: 35px; }
+.ccoin { padding: 0px 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+.coinimg { background: #9D9D9D; box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25); border-radius: 17px; display: flex; width: 70px; height: 70px; flex-direction: column; align-content: center; align-items: center; justify-content: center; margin: 0 auto; }
+.offsidsecoin_section { width: 100%; margin: 0 auto; padding-top: 40px; padding-bottom: 20px; margin-bottom: 00px; float: left; }
+.container-fluid.mainheaderdiv { padding-left: 15px; padding-right: 15px; padding-top: 30px; position: relative; background: url("images/mobilemainbg.png"); background-size: cover; height: 800px; }
+.bannertextbottomnbg::after { content: none; }
+.mainheader { padding-left: 15px; padding-right: 15px; padding-top: 100px; }
+.headermainlogo { text-align: center; }
+.headermainlogo img { max-width: 190px; }
+.bannetextleftsivcommon { padding-top: 100px; padding-left: 0; text-align: center; padding-bottom: 20px; }
+.bannertoplefttest h1 br { display: none; }
+.bannertoplefttest h1 { font-size: 26px; }
+.bannertoplefttest h4 { font-size: 18px; }
+.bannertextbottomnbg h2 { font-size: 30px; line-height: 37px; padding-left: 0; }
+.bannertextbottomnbg { padding-left: 0; margin-top: 35px; }
+.bannertextbottomnbg h2 span { font-size: 24px; }
+.bannertextbottomnbg img { position: relative; bottom: 12px; z-index: 9; max-width: 200px; }
+.bannertext_left_col { width: 100%; text-align: center; }
+.mobileleftimg { display: block; max-width: 300px; margin: 0 auto; }
+.container-fluid.qatarsection { background: url("images/qatarbg-mobile.png"); background-size: cover; background-position: top center; background-repeat: no-repeat; }
+.qatar_userimg { position: inherit; }
+.qatarlogo { position: relative; top: 50px; left: 0; text-align: center; }
+.qatarlogo img { max-width: 130px; }
+.qaratrightcol, .container-fluid.qatarsection { height: auto; }
+.qaratleftcol { order: 2; }
+.qaratleftcol .qatarlogo { display: none; }
+.qatarright_text h1 { font-size: 30px; }
+.qatarright_text h1 br { display: none; }
+.qatarright_text p { font-size: 15px; line-height: 20px; }
+.qatarright_text { position: relative; left: 0; text-align: center; padding-bottom: 20px; padding-top: 70%; }
+.container-fluid.holdoffside_section { background: url("images/holdoffsidebg-mobile.png"); height: auto; background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; overflow: hidden; display: flex; align-content: center; align-items: center; }
+.holdoffside_text::after { content: none; }
+.holdoffside_textdiv { position: relative; display: inherit; padding-top: 30px; }
+.holdoffside_img { position: relative; left: 0; z-index: 9; text-align: center; }
+.holdoffside_text { position: relative; right: 0; padding-top: 25px; padding-bottom: 30px; text-align: center; }
+.holdoffside_img img { max-width: 240px; margin: 0 auto; }
+.holdoffside_text h1 { font-weight: 800; font-size: 30px; }
+.holdoffside_text h1 br { display: none; }
+.holdoffside_text p { font-size: 14px; margin-bottom: 5px; }
+.holdoffside_text h6 { font-weight: 700; font-size: 16px; line-height: 149%; }
+.holdoffside_text img { max-width: 140px; }
+.fullypledge_right_col::before { width: 280px; height: 330px; }
+.fullypledge_right_img { position: absolute; right: 20px; top: 24px; }
+.fullypledge_right_img img { max-width: 240px; }
+.fullytext { padding: 0px 15px; }
+.fullypledge_left_col_common { width: 100%; text-align: center; position: relative; }
+.fullypledge_left_text h1 { font-weight: 700; font-size: 26px; text-align: center; }
+.fullypledge_left_text h1 br { display: none; }
+.fullypledge_left_text p { max-width: 100%; font-weight: 600; font-size: 15px; text-align: center; float: none; }
+.fullypledge_left_col { background: url("images/football-trainer-teaching-his-pupils-mobile.png"); background-size: cover; background-repeat: no-repeat; background-position: center center; float: left; width: 100%; position: relative; margin-top: 50px; margin-bottom: 50px; padding-top: 208px; padding-bottom: 0; }
+.playbtn { float: none; width: 100%; clear: left; padding-top: 0; position: relative; top: 13px; }
+.qatarlogo.mobileqatarlogo { display: block; }
+.sportsbook_img img { max-width: 240px; position: relative; right: 0; top: 100px; }
+.sportsbook_contentbg { width: 100%; position: inherit; }
+.sportsbook_img { position: relative; z-index: 9; bottom: 0; text-align: center; }
+.sportstext { padding: 25px 10px; position: relative; text-align: center; padding-top: 120px; }
+.sportjoinnow-bg { display: inherit; width: 240px; margin: 0 auto; }
+.jointext h2 { font-size: 14px; line-height: 18px; text-align: center; }
+.jointext { text-align: center; background: url("images/joinnow-bg-mobile.png"); background-size: 100%; padding-right: 0; padding-top: 5px; padding-bottom: 1px; }
+.sportstext h1 br { display: none; }
+.sportstext::after { content: ""; background: url("images/referpattern-mobile.png"); position: absolute; width: 100%; left: 0; height: 100%; top: 0; background-repeat: no-repeat; background-size: 100%; border-radius: 20px; }
+.joinbtn img { position: relative; right: 0; border-radius: 5px; width: 100%; max-height: inherit; }
+.joinnowmobilebtn { display: block; }
+.joinnowdesktopbtn { display: none; }
+.hold-mobileimg { display: block; }
+.hold-desktopimg { display: none; }
+.bannertextbottomnbg .sitecta::after { content: none; }
+}
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+.provider_imglist img { max-width: 80px; }
+.provider_imglist .secondlist_row { margin-top: 20px; margin-bottom: 20px; }
+.provider_imglist ul li { margin: 0px 15px; }
+.headermainlogo { text-align: center; }
+.section-title h1 { font-size: 35px; }
+.header_middle_col, .header_third_col { display: none; }
+.mainheader { padding-left: 50px; padding-right: 50px; padding-top: 50px; }
+.mobileleftimg { display: block; max-width: 90%; margin-top: -50px; }
+.container-fluid.mainheaderdiv { background: url("images/topbanner.png"); background-position-x: 0%; background-position-y: 0%; background-repeat: repeat; background-size: auto; padding-bottom: 50px; padding-top: 50px; height: 100%; background-size: cover; background-position: center center; background-repeat: no-repeat; padding-left: 50px; padding-right: 50px; }
+.bannetextleftsivcommon { padding-left: 30px; }
+.bannertoplefttest h1 { font-size: 32px; }
+.bannertoplefttest h4 { font-size: 20px; }
+.bannertextbottomnbg { margin-top: 0; }
+.mimg { width: 50%; }
+.comm { width: 50%; }
+.bannertoplefttest { display: flex; }
+.bannertextbottomnbg h2 { font-size: 46px; line-height: 50px; }
+.bannertextbottomnbg h2 span { font-size: 26px; }
+.bannertextbottomnbg img { bottom: 30px; z-index: 9; max-width: 250px; }
+.bannertextbottomnbg::after { height: 165px; }
+.container-fluid.holdoffside_section { height: auto; padding: 70px 0; }
+.holdoffside_img { position: relative; left: 0; z-index: 9; }
+.holdoffside_img img { max-width: 450px; }
+.holdoffside_text { position: relative; right: 0; padding-top: 25px; padding-bottom: 30px; left: -100px; }
+.holdoffside_img { position: relative; left: -60px; z-index: 9; top: -50px; }
+.holdoffside_text h1 { font-size: 30px; }
+.holdoffside_text h1 br { display: none; }
+.holdoffside_text p br { display: none; }
+.holdoffside_text::after { left: -222px; }
+.qaratrightcol, .container-fluid.qatarsection { height: 420px; }
+.qatarlogo { position: relative; top: 50px; left: 30px; }
+.qatarright_text h1 { font-size: 30px; }
+.qatarright_text { left: 20px; }
+.qatarright_text p { font-size: 16px; }
+.fullypledge_left_col { margin-top: 80px; margin-bottom: 80px; padding-top: 65px; }
+.fullypledge_left_text h1 { font-size: 30px; }
+.fullypledge_left_text p { max-width: 365px; font-size: 16px; }
+.fullypledge_right_col::before { width: 500px; height: 495px; }
+.fullypledge_right_img { position: absolute; right: 40px; top: 100px; }
+.fullypledge_right_img img { max-width: 300px; }
+.sportstext p { font-weight: 700; font-size: 16px; }
+.sportsjoinnow-div { margin-top: 10px; }
+.sportstext h1 { font-size: 30px; margin-bottom: 10px; }
+.sportsbook_contentbg { width: 500px; }
+.sportsbook_img img { max-width: 300px; position: relative; right: 30px; }
+.sportsbook_img { bottom: 50px; }
+.jointext h2 { font-size: 15px; line-height: 17px; }
+.jointext h2 br { display: none; }
+.sportstext h1 br { display: none; }
+.sportstext { padding: 35px 30px 35px 100px; }
+sports-section-div { margin-top: 75px; right: 0; }
+.sports-section-div { max-width: 690px; margin-left: auto; margin-right: auto; }
+.cointitle h1 { font-size: 30px; }
+.coinlist ul li { width: 80px; height: 80px; }
+.offsidsecoin_section { padding: 30px; }
+.livestream_section .sportsbook_img img { max-width: 300px; }
+.livestream_section .sportstext { padding: 20px 78px 20px 175px; position: relative; }
+.livestream_section .sportsbook_contentbg { width: 550px; }
+.referfriend_imgdiv { right: -60px; bottom: -95%; }
+.referfrienddiv { padding-left: 35px; }
+.referfriend_img img { max-height: 325px; }
+.referfriend_text p { font-size: 18px; }
+.referfriend_text h1 { font-size: 30px; }
+.referfriend_section { width: 690px; }
+.container-fluid.features-section { padding-bottom: 60px; }
+.container-fluid.development-strategy-section { padding-top: 40px; padding-bottom: 20px; }
+.joinbtn img { max-height: 80px; }
+.offsidsecoin_section { max-width: 690px; }
+.overlay-menu .social_icon { margin-top: 40px !important; }
+.overlay-menu .social_icon .sitecta { margin-top: 25px; }
+.social_icon ul li img { max-width: 100% !important; }
+.social_icon ul li { margin: 0px 4px !important; }
+.coinlist.desktop ul li img { max-width: 50px; }
+.developmentgrid { width: 600px !important; }
+.develipment-img img { max-width: 50px; }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+.developmentgrid { width: 600px; margin: 0 auto; }
+.holdoffside_text::after { left: -150px; }
+.holdoffside_img { position: relative; left: 0; z-index: 9; top: 5px; }
+.footer_list { display: block; }
+.fullypledge_left_col_common { width: 55%; }
+.header_first_col { width: 100%; max-width: 100%; flex: inherit; }
+.bannertoplefttest h1 { font-size: 40px !important; }
+.bannertoplefttest h4 { font-size: 28px !important; }
+.comm { padding-top: 40px; }
+}
+ @media only screen and (max-width: 1024px) {
+.main_humbergmenu { display: block; }
+.header_social_div_common { display: none; }
+.mainmenu { display: none; }
+.footer_logo_img { text-align: center; }
+.container-fluid.footer { padding-top: 60px; padding-bottom: 60px; }
+.footer_logo_img p { font-size: 18px; margin-top: 10px; margin-bottom: 0; }
+.footer_list { display: none; }
+.provider_imglist.mobileipad { display: block; }
+.provider_imglist.desktop { display: none; }
+.developmentgrid_top, .developmentgrid_bottom { display: inherit; }
+.developmentgrid_bottom { margin-top: 0; }
+.developmentgrid { width: 100%; }
+.developmentgrid_top .development_col:last-child::after { content: none; }
+.development-text h1 { text-align: left; min-height: auto; margin-top: 0; margin-bottom: 10px; }
+.development-text h1 br { display: none; }
+.development-text { width: auto; margin: 0; text-align: left; padding-left: 40px; }
+.developmentbox { display: flex; }
+.developmentgrid_top .development_col:last-child { margin-right: 0; right: 0; }
+.development-text p { text-align: left; }
+.development_col { margin-bottom: 60px; }
+.development_col::after, .developmentgrid_top .development_col:last-child::after, .developmentgrid_top .development_col::after, .developmentgrid_top .development_col:last-child::after, .developmentgrid_top .development_col:nth-child(2)::after, .developmentgrid_bottom .development_col::after { content: ""; background: #02856a; width: 10px; height: 184px; position: absolute; left: 43px; top: 48px; z-index: -1; }
+.developmentgrid_top .development_col:first-child::after { height: 29px; width: 210px; position: absolute; left: -64px; top: 133px; z-index: -1; background-size: 100%; transform: rotate(90deg); background-repeat: no-repeat; }
+/* mobile menu css start */
+.main_humbergmenu { display: block; }
+.main_humbergmenu { position: relative; width: 100%; heigh: 100%; text-align: center; top: 40%; left: 0; margin: 0 auto; }
+.main_humbergmenu p { font-size: 20px; }
+.main_humbergmenu a { display: inline-block; text-align: center; font-size: 20px; }
+.main_humbergmenu a:hover:after, .main_humbergmenu a:focus:after, .main_humbergmenu a:active:after { width: 100%; }
+.button_container { position: absolute; top: 35px; left: 10%; height: 27px; width: 33px; cursor: pointer; z-index: 99999; transition: opacity 0.25s ease; }
+.down .button_container { top: 23px; }
+.container-fluid.header.fixed-header { padding: 16px 30px; }
+.fixed-header .header_logo img { max-width: 60px; }
+.button_container:hover span { background: #00FFCA; }
+.button_container.active .top { transform: translateY(11px) translateX(0) rotate(45deg); }
+.button_container.active .middle { opacity: 0; }
+.button_container.active .bottom { transform: translateY(-11px) translateX(0) rotate(-45deg); }
+.button_container span { background: #00FFCA; border: none; height: 4px; width: 100%; position: absolute; top: 0; left: 0; transition: all 0.35s ease; cursor: pointer; z-index: 9; border-radius: 10px; }
+.button_container span:nth-of-type(2) { top: 11px; }
+.button_container span:nth-of-type(3) { top: 22px; }
+.overlay { position: fixed; background: #000; top: 0; left: 0; width: 100%; height: 0%; opacity: 0; visibility: hidden; transition: opacity 0.35s, visibility 0.35s, height 0.35s; overflow: hidden; z-index: 999; }
+.overlay.open { opacity: 1; visibility: visible; height: 100%; }
+.overlay.open li:nth-of-type(2) { animation-delay: 0.4s; }
+.overlay.open li:nth-of-type(3) { animation-delay: 0.45s; }
+.overlay.open li:nth-of-type(4) { animation-delay: 0.5s; }
+.overlay nav { position: relative; height: 100%; font-size: 50px; font-weight: 400; text-align: center; margin-top: 40px; }
+.overlay ul { list-style: none; padding: 0; margin: 0 auto; position: relative; height: 100%; }
+.overlay ul li { display: block; position: relative; opacity: 1; margin-bottom: 20px; }
+.overlay ul li a { position: relative; color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 700; font-size: 16px; line-height: 100%; letter-spacing: 0.085em; }
+.overlay ul li a:hover { color: #00FFCA; }
+.overlay ul li.current-menu-item a { color: #b08513; }
+.overlay ul li.current-menu-item a::after { width: 100%; }
+.main_humbergmenu .menu-mainmenu-container { position: relative; height: 70%; top: 50%; transform: translateY(-50%); font-size: 50px; font-weight: 400; text-align: center; }
+body.menuopen { position: fixed; width: 100%; }
+.social_icon ul li { display: inline-block; }
+.social_icon ul li img { max-width: 35px; }
+.mbtn img { max-width: 140px; }
+.social_icon .sitecta a { font-size: 26px !important; padding: 5px 27px !important; }
+/* mobile menu css end */
+}
+ @media only screen and (min-width: 1025px) and (max-width: 1199px) {
+.provider_imglist img { max-width: 95px; }
+.provider_imglist ul li { margin: 0px 10px; }
+.section-title h1 { font-size: 40px; }
+.footer_logo_img p { font-size: 18px; }
+.develipment-img img { max-width: 40px; }
+.develipment-img { width: 80px; height: 80px; }
+.development-text h1 { font-size: 22px; margin-bottom: 14px; margin-top: 25px; min-height: 50px; transition: all .5s; }
+.developmentgrid { width: 950px; }
+.developmentgrid_top .development_col:first-child::after { top: 35px; }
+.developmentgrid_top .development_col:nth-child(2)::after { left: 155px; top: 35px; }
+.developmentgrid_top .development_col:last-child::after { right: -15px; width: 160px; height: 379px; top: 34px; }
+.developmentgrid_bottom .development_col::after { left: 154px; top: 35px; }
+.livestream_section .sportsbook_img img { max-width: 415px; position: relative; right: 0; bottom: 0; top: -68px; left: 60px; }
+.sportstext h1 { font-size: 40px; }
+.referfriend_text h1 { font-size: 40px; }
+.referfriend_section { width: 93%; }
+.referfriend_img img { max-height: 480px; right: 15px; position: relative; }
+.container-fluid.features-section { padding-bottom: 115px; }
+.cointitle h1 { font-size: 45px; }
+.coinlist ul li { width: 100px; height: 100px; }
+.sportsbook_img img { max-width: 400px; position: relative; right: 6px; top: 10px; }
+.sportstext { padding: 35px 30px 35px 128px; }
+.sportsbook_contentbg { width: 625px; }
+.sports-section-div { margin-top: 100px; }
+.fullypledge_left_col { margin-top: 130px; margin-bottom: 110px; padding-top: 40px; padding-bottom: 40px; }
+.fullypledge_right_col::before { width: 640px; height: 760px; }
+.fullypledge_right_img img { max-width: 400px; position: relative; top: 13px; left: 27px; }
+.fullypledge_left_text h1 { font-size: 45px; }
+.qatarright_text { left: 0; }
+.qatarright_text h1 { font-size: 45px; }
+.qaratrightcol, .container-fluid.qatarsection { height: 540px; }
+.mainheader { padding-left: 60px; padding-right: 60px; padding-top: 60px; }
+.headermainlogo img { max-width: 200px; }
+.mainmenu ul li { margin-right: 25px; }
+.headersocial li img { max-width: 35px; }
+.headersocial li:last-child img { max-width: 150px; }
+.headersocial ul li { margin-right: 5px; }
+.holdoffside_text h1 { font-size: 40px; }
+.holdoffside_text h1 br { display: none; }
+.holdoffside_text p { font-size: 15px; line-height: 18px; margin-bottom: 5px; }
+.holdoffside_text { position: relative; right: 195px; padding-top: 45px; padding-bottom: 25px; }
+.holdoffside_img { position: relative; left: 0; z-index: 9; }
+.container-fluid.holdoffside_section { height: 650px; }
+.bannertoplefttest h1 { font-size: 45px; }
+.bannertextbottomnbg h2 { font-size: 50px; line-height: 55px; }
+.bannertextbottomnbg img { position: relative; bottom: 20px; z-index: 9; max-width: 300px; }
+.headersocial ul { display: flex; align-items: center; }
+.headersocial .sitecta a { font-size: 20px; }
+}
+ @media only screen and (min-width: 1025px) and (max-width: 1399px) {
+.container-fluid.mainheaderdiv { padding-left: 50px; padding-right: 50px; padding-top: 100px; padding-bottom: 65px; background-position: center center; height: auto; }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+.mainmenu ul li { display: inline-block; margin-right: 35px; }
+.mainheader { padding-left: 70px; padding-right: 70px; padding-top: 80px; }
+.headermainlogo img { max-width: 200px; }
+.headersocial li img { max-width: 35px; }
+.headersocial li:last-child img { max-width: 150px; }
+.bannertextbottomnbg h2 { font-size: 50px; }
+.qatarright_text h1 { font-size: 50px; }
+.qatarright_text { position: relative; left: 0; }
+.fullypledge_right_col::before { width: 740px; height: 1000px; }
+.fullypledge_right_img img { max-width: 430px; }
+.fullypledge_left_text h1 { font-size: 50px; }
+.sportsbook_img img { max-width: 400px; position: relative; right: 0; }
+.cointitle h1 { font-size: 45px; }
+.coinlist ul li { width: 100px; height: 100px; }
+.livestream_section .sportsbook_img img { max-width: 540px; position: relative; right: 0; bottom: 0; top: -68px; left: 60px; }
+.sportstext h1 { font-size: 45px; }
+.referfriend_text h1 { font-size: 45px; }
+.referfriend_section { width: 93%; }
+.referfriend_img img { max-height: 545px; right: 0; position: relative; }
+.container-fluid.features-section { padding-bottom: 130px; }
+.provider_imglist ul li { margin: 0px 12px; }
+}
+/* RESPONSIVE MEDIA QUERY CSS END */
+@media only screen and (max-width: 575px) {
+.develipment-img img { max-width: 35px; }
+.develipment-img { width: 70px; height: 70px; }
+.development-text h1 { font-size: 20px; }
+.development-text p { font-size: 13px; line-height: 15px; }
+.developmentgrid { padding: 0px 5px; }
+.development-text { padding-left: 30px; }
+.developmentgrid_top .development_col:first-child::after { left: -59px; width: 170px; }
+.development_col::after, .developmentgrid_top .development_col:last-child::after, .developmentgrid_top .development_col:nth-child(2)::after, .developmentgrid_bottom .development_col::after { content: ""; background: #02856a; width: 10px; height: 184px; position: absolute; left: 30px; top: 48px; z-index: -1; }
+.developentprocessdiv { margin-top: 55px; width: 260px; margin-left: auto; margin-right: auto; }
+.container-fluid.development-strategy-section { background: linear-gradient(180deg, #333B48 0%, #20252C 100%); padding-top: 90px; padding-bottom: 20px; }
+}
